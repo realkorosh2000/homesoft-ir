@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeSoft</title>
+    <style>
+        /* ======= CSS ======= */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        /* Top menu */
+        nav {
+            background-color: #0077cc;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: flex-end;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Centered button */
+        .center-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .blue-button {
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            padding: 20px 40px;
+            font-size: 1.2em;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .blue-button:hover {
+            background-color: #005fa3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #0077cc;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Menu -->
+    <nav>
+        <a href="#download" onclick="alert('Download clicked!')">Download Software</a>
+        <a href="#feedback" onclick="alert('Feedback clicked!')">Feedback</a>
+    </nav>
+
+    <!-- Center Button -->
+    <div class="center-container">
+        <button class="blue-button" onclick="alert('HomeSoft Button Clicked!')">Get Started</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 HomeSoft
+    </footer>
+
+    <script>
+        // ======= JavaScript =======
+        console.log("HomeSoft website loaded!");
+    </script>
+</body>
+</html>
