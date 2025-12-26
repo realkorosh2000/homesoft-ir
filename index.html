@@ -58,9 +58,8 @@ button.download-btn:hover {
 
 <header>
   <h1>HomeSoft</h1>
-  <nav>
+  <nav id="mainNav">
     <a href="downloads.html">Download Software</a>
-    <a href="feedback.html">Feedback</a>
   </nav>
 </header>
 
@@ -69,6 +68,16 @@ button.download-btn:hover {
   <p>Your personal software hub.</p>
   <button class="download-btn" onclick="window.location='downloads.html'">Go to Downloads</button>
 </div>
+
+<script>
+// Automatically add Feedback button to nav
+const nav = document.getElementById('mainNav');
+const feedbackLink = document.createElement('a');
+feedbackLink.href = 'feedback.html';
+feedbackLink.innerText = 'Feedback';
+feedbackLink.style.marginLeft = '20px';
+nav.appendChild(feedbackLink);
+</script>
 
 </body>
 </html>
