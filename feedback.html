@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Feedback - HomeSoft</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #eef;
+  margin: 20px;
+}
+h1, h2 {
+  text-align: center;
+}
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0056b3;
+}
+#status {
+  margin-top: 15px;
+  font-weight: bold;
+  color: green;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h1>HomeSoft Feedback</h1>
+
+<div class="container">
+  <h2>Send us your feedback</h2>
+  <form id="feedbackForm">
+    <input type="email" id="email" placeholder="Your email" required>
+    <textarea id="feedback" placeholder="Your feedback" rows="5" required></textarea>
+    <button type="submit">Submit Feedback</button>
+  </form>
+  <div id="status"></div>
+</div>
+
+<script>
+document.getElementById('feedbackForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  
+  const email = document.getElementById('email').value.trim();
+  const feedbackText = document.getElementById('feedback').value.trim();
+  
+  if(!email || !feedbackText){
+    alert("Please fill in both email and feedback.");
+    return;
+  }
+
+  const feedbackEntry = {
+    email: email,
+    feedback: feedbackText,
+    timestamp: new Date().toISOString()
+  };
+
+  // WARNING: GitHub Pages is static, cannot write JSON automatically
+  console.log("New feedback entry (copy to feedbacks.json manually):", feedbackEntry);
+
+  document.getElementById('status').innerText = 
+    "Thank you for your feedback! To save it permanently, add this entry to feedbacks.json.";
+
+  // Optional: prepare JSON for manual copy
+  const manualJSON = JSON.stringify(feedbackEntry, null, 2);
+  console.log("Copy this JSON to feedbacks.json:", manualJSON);
+
+  // Clear form
+  document.getElementById('feedbackForm').reset();
+});
+</script>
+
+</body>
+</html>
