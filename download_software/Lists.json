@@ -1,8 +1,12 @@
 [
   {
-    "name": "terex-paint Image editor",
+    "name": "terex-paint v1 Image editor",
     "file": "download_software/terex-paint/terex-paint.jar",
-    "icon": "download_software/icon.png"
+    "icon": "download_software/terex-paint/icon.png"
+  },
+  {
+    "name": "terexX text editor v1",
+    "file": "download_software/terexX/terexX-1",
+    "icon": "download_software/terexX/icon.png"
   }
 ]
-
